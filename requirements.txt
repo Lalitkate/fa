@@ -11,6 +11,6 @@ pandas==1.5.1
 python-dateutil==2.8.2
 pytz==2022.6
 six==1.16.0
-sklearn==0.0.post1
+sklearn==0.0
 Werkzeug==2.2.2
 zipp==3.10.0
