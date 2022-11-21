@@ -32,10 +32,10 @@ def main():
         prediction = model.predict(test_data)
         
         if prediction == 1:
-            result = "True Alarm"
+            result = "True Alarm, It's Danger...!"
             return render_template("file.html", output = result)
         else:
-            result = "NOT"
+            result = "False Alarm, Relax...!"
             return render_template("file.html", output = result)
         
 
