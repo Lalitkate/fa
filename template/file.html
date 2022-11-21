@@ -5,19 +5,39 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous" crossorigin="anonymous">
     </head>
-        <body  class="fluid-container bg-dark text-white main_container mw-100">
-            <div  class="text-center text-warning "><H1 class="mt-5">FALSE ALARM DETECTOR</H1></div>
+    <div class="bg-image no-repeat img-responsive"style="background-size:100% 100%; background-image: url('https://images.unsplash.com/photo-1608723724423-6f60a2fc1a90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80'); width: 100vw;
+    height: 100vh;">
+        <body  class=" text-white " >
+            <br>
+            <br>
+            <br>
+            <div  class="text-center text-danger display-6"><H1 class="h1" style="font-family: myFirstFont;
+                src: url(sansation_bold.woff);
+                font-weight: bold;">FALSE ALARM DETECTOR</H1></div>
+             <br>
+             <br>
+             <br>
             <form name="form", method="POST", style="text-align: center;">
-            <br><h5>Ambient Temperature: </h4><input type="number"  step="any" name="Ambient Temperature", placeholder="Enter Ambient Temperature" required/><br>
-               <br><h5>Calibration:</h4> <input type="number" step = "any" name="Calibration", placeholder="Enter Calibration" required/><br>
-                <br><h5>Unwanted substance deposition:</h5> <input type="number" step = "any" name="Unwanted substance deposition", placeholder="Enter Unwanted substance deposition" required/><br>
-               <br><h5> Humidity: </h4><input type="text" step = "any" name="Humidity", placeholder="Enter Humidity" required/> <br>
-               <br><h5> H2S Content: </h4><input type="text" step = "any" name="H2S Content", placeholder="Enter H2S Content" required/> <br>
-               <br><h5> detected by: </h4><input type="text" step = "any" name="detected by", placeholder="Enter detected by" required/> <br>
-                <button class="m-3 btn btn-warning" value="Submit">TRUE OR FALSE ALARM ?</button>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <br><h5>Ambient Temperature: </h4><input type="number"  step="any" name="Ambient Temperature", placeholder="Enter Ambient Temperature" required/><br>
+                                 <br><h5>Calibration:</h4> <input type="number" step = "any" name="Calibration", placeholder="Enter Calibration" required/><br>
+                                  <br><h5>Unwanted substance deposition:</h5> <input type="number" step = "any" name="Unwanted substance deposition", placeholder="Enter Unwanted substance deposition" required/><br>
+                      </div>
+                      <div class="col">
+                        <br><h5> Humidity: </h4><input type="text" step = "any" name="Humidity", placeholder="Enter Humidity" required/> <br>
+                                 <br><h5> H2S Content: </h4><input type="text" step = "any" name="H2S Content", placeholder="Enter H2S Content" required/> <br>
+                                 <br><h5> detected by: </h4><input type="text" step = "any" name="detected by", placeholder="Enter detected by" required/> <br>
+                      </div>
+                    </div>
+                  </div>
+                <button class="m-5 btn btn-danger" value="Submit">TRUE OR FALSE ALARM ?</button>
             </form>
             {% if output %}
-            <p style="text-align: center;" class="text-warning h4"> ALARM :{{output}} </p>
+            <p style="text-align: center;" class="text-warning h4"> Result : {{output}} </p>
             {%endif%}
+        </div>
         </body>
+    </div>
 </html>
