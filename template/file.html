@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FALSE ALARM DETECTOR</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous" crossorigin="anonymous">
+    </head>
+        <body  class="fluid-container bg-dark text-white main_container mw-100">
+            <div  class="text-center text-warning "><H1 class="mt-5">FALSE ALARM DETECTOR</H1></div>
+            <form name="form", method="POST", style="text-align: center;">
+            <br><h5>Ambient Temperature: </h4><input type="number"  step="any" name="Ambient Temperature", placeholder="Enter Ambient Temperature" required/><br>
+               <br><h5>Calibration:</h4> <input type="number" step = "any" name="Calibration", placeholder="Enter Calibration" required/><br>
+                <br><h5>Unwanted substance deposition:</h5> <input type="number" step = "any" name="Unwanted substance deposition", placeholder="Enter Unwanted substance deposition" required/><br>
+               <br><h5> Humidity: </h4><input type="text" step = "any" name="Humidity", placeholder="Enter Humidity" required/> <br>
+               <br><h5> H2S Content: </h4><input type="text" step = "any" name="H2S Content", placeholder="Enter H2S Content" required/> <br>
+               <br><h5> detected by: </h4><input type="text" step = "any" name="detected by", placeholder="Enter detected by" required/> <br>
+                <button class="m-3 btn btn-warning" value="Submit">TRUE OR FALSE ALARM ?</button>
+            </form>
+            {% if output %}
+            <p style="text-align: center;" class="text-warning h4"> ALARM :{{output}} </p>
+            {%endif%}
+        </body>
+</html>
